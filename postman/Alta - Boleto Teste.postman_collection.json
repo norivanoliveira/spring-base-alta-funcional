@@ -1,0 +1,63 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Alta - Boleto Teste",
+		"_postman_id": "c1a2e8af-6566-598f-6c9a-b180c5a97bcd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obter boleto por ID",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/boleto?id=12u1u32-1u2u1u1-13uu3u13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"boleto"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "12u1u32-1u2u1u1-13uu3u13",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Obtem um boleto por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Obter lista de boletos",
+			"request": {
+				"url": "http://localhost:8080/lista",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Obtem um boleto por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Emitir Boleto",
+			"request": {
+				"url": "http://localhost:8080/boleto",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "Emite um boleto"
+			},
+			"response": []
+		}
+	]
+}

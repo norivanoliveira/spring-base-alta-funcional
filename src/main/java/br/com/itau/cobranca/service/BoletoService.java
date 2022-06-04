@@ -1,0 +1,28 @@
+package br.com.itau.cobranca.service;
+
+import br.com.itau.cobranca.jpa.entity.Boleto;
+import br.com.itau.cobranca.jpa.repo.BoletoRepositoy;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
+import java.util.List;
+
+@Service
+public class BoletoService {
+    @Autowired
+    BoletoRepositoy repositoy;
+
+    @Transactional
+    public Boleto salvarBoleto(Boleto boleto){
+        return repositoy.save(boleto);
+    }
+
+    public Boleto obterBoletoPorId(Integer id) {
+        return repositoy.findById(id).orElse(null);
+    }
+
+    public List<Boleto> obterListaBoleto() {
+        return repositoy.findAll();
+    }
+}
