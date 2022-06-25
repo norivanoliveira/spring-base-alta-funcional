@@ -1,13 +1,12 @@
-package br.com.itau.cobranca.rest;
+package br.com.bancox.cobranca.rest;
 
-import br.com.itau.cobranca.domain.BoletoDomain;
-import br.com.itau.cobranca.jpa.entity.Boleto;
-import br.com.itau.cobranca.service.BoletoService;
+import br.com.bancox.cobranca.domain.BoletoDomain;
+import br.com.bancox.cobranca.jpa.entity.Boleto;
+import br.com.bancox.cobranca.service.BoletoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.List;
 
 @RestController

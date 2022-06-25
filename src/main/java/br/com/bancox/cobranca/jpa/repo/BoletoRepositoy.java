@@ -1,10 +1,8 @@
-package br.com.itau.cobranca.jpa.repo;
+package br.com.bancox.cobranca.jpa.repo;
 
-import br.com.itau.cobranca.jpa.entity.Boleto;
+import br.com.bancox.cobranca.jpa.entity.Boleto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.math.BigInteger;
 
 
 @Repository

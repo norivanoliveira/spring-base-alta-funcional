@@ -1,7 +1,7 @@
-package br.com.itau.cobranca.service;
+package br.com.bancox.cobranca.service;
 
-import br.com.itau.cobranca.jpa.entity.Boleto;
-import br.com.itau.cobranca.jpa.repo.BoletoRepositoy;
+import br.com.bancox.cobranca.jpa.entity.Boleto;
+import br.com.bancox.cobranca.jpa.repo.BoletoRepositoy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

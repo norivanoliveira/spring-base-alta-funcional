@@ -1,4 +1,4 @@
-package br.com.itau.cobranca.domain;
+package br.com.bancox.cobranca.domain;
 
 import lombok.Getter;
 import lombok.Setter;

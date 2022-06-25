@@ -1,4 +1,4 @@
-package br.com.itau.cobranca.app;
+package br.com.bancox.cobranca.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

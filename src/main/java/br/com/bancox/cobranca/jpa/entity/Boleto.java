@@ -1,4 +1,4 @@
-package br.com.itau.cobranca.jpa.entity;
+package br.com.bancox.cobranca.jpa.entity;
 
 import lombok.Getter;
 import lombok.Setter;
