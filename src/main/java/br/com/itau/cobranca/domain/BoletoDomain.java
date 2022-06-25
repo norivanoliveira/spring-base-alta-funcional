@@ -1,10 +1,5 @@
 package br.com.itau.cobranca.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
 public class BoletoDomain {
 
     private String beneficiario;

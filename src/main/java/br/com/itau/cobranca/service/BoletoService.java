@@ -18,11 +18,11 @@ public class BoletoService {
         return repositoy.save(boleto);
     }
 
-    public Boleto obterBoletoPorId(Integer id) {
-        return repositoy.findById(id).orElse(null);
+    public List<Boleto> obterTodosBoletos(){
+        return repositoy.findAll();
     }
 
-    public List<Boleto> obterListaBoleto() {
-        return repositoy.findAll();
+    public Boleto detalharBoleto(Integer id){
+        return repositoy.findById(id).orElse(null);
     }
 }

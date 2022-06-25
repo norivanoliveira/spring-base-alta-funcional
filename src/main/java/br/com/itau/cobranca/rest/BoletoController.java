@@ -21,27 +21,23 @@ public class BoletoController {
         return "<center><img src='https://logospng.org/download/itau/logo-itau-256.png'> </img><p>Bem vindo a baixa plataforma ;)</p></center>";
     }
 
-    @GetMapping("/boleto")
-    public Boleto obterBoleto(@RequestParam(value = "id") Integer id) {
-        // TODO: Início - Exercício 2: Pensando na realidade, o id do boleto não pode ser Inteiro. Tente resolver!
-       return service.obterBoletoPorId(id);
-        // TODO: Fim - Exercício 2: Pensando na realidade do banco, o id do boleto não pode ser Inteiro. Tente resolver!
+    @GetMapping(value = "/boletos/{id}")
+    public Boleto obterBoleto(@PathVariable Integer id){
+        return service.detalharBoleto(id);
     }
 
-    @GetMapping("/lista")
-    public List<Boleto> obterLstaBoleto() {
-
-        return service.obterListaBoleto();
+    @GetMapping(value = "/boletos")
+    public List<Boleto> obterBoletos(){
+        return service.obterTodosBoletos();
     }
 
-    @PostMapping(value = "/boleto")
-    public Boleto criarBoleto(BoletoDomain request) {
+    @PostMapping(value = "/boletos")
+    public Boleto criarBoleto(@RequestBody BoletoDomain request) {
 
-        // TODO: Início - Exercício 1: tente usar o BoletoMapper para criar o objeto Boleto ao invés de usar as linhas abaixo
         Boleto boleto =  new Boleto();
         boleto.setBeneficiario(request.getBeneficiario());
         boleto.setValor(new BigDecimal(request.getValor()));
-        // TODO: Fim - Exercício 1.
+
 
         return service.salvarBoleto(boleto);
 
