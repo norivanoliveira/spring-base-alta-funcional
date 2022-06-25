@@ -1,13 +1,14 @@
 package br.com.itau.cobranca.jpa.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.UUID;
+
 @Entity
+@Getter
+@Setter
 public class Boleto {
 
     @Id
@@ -18,23 +19,4 @@ public class Boleto {
     private String beneficiario;
     private BigDecimal valor;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public String getBeneficiario() {
-        return beneficiario;
-    }
-
-    public void setBeneficiario(String beneficiario) {
-        this.beneficiario = beneficiario;
-    }
-
-    public BigDecimal getValor() {
-        return valor;
-    }
-
-    public void setValor(BigDecimal valor) {
-        this.valor = valor;
-    }
 }
